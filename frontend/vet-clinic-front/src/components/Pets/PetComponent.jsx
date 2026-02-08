@@ -81,9 +81,9 @@ const PetComponent = () => {
 
   function pageTitle() {
     if (id) {
-      return <h2 className="text-center">Update Pet</h2>;
+      return <h2 className="text-center">Atualizar Pet</h2>;
     } else {
-      return <h2 className="text-center">Add Pet</h2>;
+      return <h2 className="text-center">Adicionar Pet</h2>;
     }
   }
 
@@ -138,84 +138,84 @@ const PetComponent = () => {
     if (client) {
       errorsCopy.client = "";
     } else {
-      errorsCopy.client = "Select Client";
+      errorsCopy.client = "Selecione o Cliente";
       valid = false;
     }
 
     if (name.trim()) {
       errorsCopy.name = "";
     } else {
-      errorsCopy.name = "Name is required";
+      errorsCopy.name = "Nome é obrigatório";
       valid = false;
     }
 
     if (specie.trim()) {
       errorsCopy.specie = "";
     } else {
-      errorsCopy.specie = "Space is required";
+      errorsCopy.specie = "Espécie é obrigatório";
       valid = false;
     }
 
     if (breed.trim()) {
       errorsCopy.breed = "";
     } else {
-      errorsCopy.breed = "Breed is required";
+      errorsCopy.breed = "Raça é obrigatório";
       valid = false;
     }
 
     if (color.trim()) {
       errorsCopy.color = "";
     } else {
-      errorsCopy.color = "Color is required";
+      errorsCopy.color = "Cor é obrigatório";
       valid = false;
     }
 
     if (height && !isNaN(height) && height > 0) {
       errorsCopy.height = "";
     } else {
-      errorsCopy.height = "Height is required and must be a positive number";
+      errorsCopy.height = "A altura é obrigatória e deve ser um número positivo.";
       valid = false;
     }
 
     if (weight && !isNaN(weight) && weight > 0) {
       errorsCopy.weight = "";
     } else {
-      errorsCopy.weight = "Weight is required and must be a positive number";
+      errorsCopy.weight = "O peso é obrigatório e deve ser um número positivo.";
       valid = false;
     }
 
     if (gender.trim()) {
       errorsCopy.gender = "";
     } else {
-      errorsCopy.gender = "Gender is required";
+      errorsCopy.gender = "Gênero é obrigatório";
       valid = false;
     }
 
     if (birthDate.trim()) {
       errorsCopy.birthDate = "";
     } else {
-      errorsCopy.birthDate = "BirthDate is required";
+      errorsCopy.birthDate = "Data de nascimento é obrigatório";
       valid = false;
     }
 
     if (father.trim()) {
       errorsCopy.father = "";
     } else {
-      errorsCopy.father = "Father is required";
+      errorsCopy.father = "Pai é necessário";
       valid = false;
     }
 
     if (mother.trim()) {
       errorsCopy.mother = "";
     } else {
-      errorsCopy.mother = "Mother is required";
+      errorsCopy.mother = "Mãe é necessário";
       valid = false;
     }
 
     if (observations.trim()) {
       errorsCopy.observations = "";
     } else {
-      errorsCopy.observations = "Observations is required";
+      errorsCopy.observations = "Observações é necessário";
       valid = false;
     }
 
@@ -235,7 +235,7 @@ const PetComponent = () => {
           <div className="card-body">
             <form>
               <div className="form-group mb-2">
-                <label className="form-label">Select Client:</label>
+                <label className="form-label">Selecionar Cliente:</label>
                 <select
                   className={`form-control ${
                     errors.client ? "is-invalid" : ""
@@ -243,7 +243,7 @@ const PetComponent = () => {
                   value={client}
                   onChange={(e) => setClient(e.target.value)}
                 >
-                  <option value="Select Client">Select Client</option>
+                  <option value="Select Client">Selecionar Cliente</option>
                   {clients.map((client) => (
                     <option key={client._id} value={client._id}>
                       {client.name}
@@ -256,10 +256,10 @@ const PetComponent = () => {
                 )}
               </div>
               <div className="form-group mb-2">
-                <label className="form-label">Name:</label>
+                <label className="form-label">Nome:</label>
                 <input
                   type="text"
-                  placeholder="name"
+                  placeholder="nome"
                   name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -270,10 +270,10 @@ const PetComponent = () => {
                 )}
               </div>
               <div className="form-group mb-2">
-                <label className="form-label">Specie:</label>
+                <label className="form-label">Espécie:</label>
                 <input
                   type="text"
-                  placeholder="specie"
+                  placeholder="espécie"
                   name="text"
                   value={specie}
                   onChange={(e) => setSpecie(e.target.value)}
@@ -286,10 +286,10 @@ const PetComponent = () => {
                 )}
               </div>
               <div className="form-group mb-2">
-                <label className="form-label">Breed:</label>
+                <label className="form-label">Raça:</label>
                 <input
                   type="text"
-                  placeholder="breed"
+                  placeholder="raça"
                   name="breed"
                   value={breed}
                   onChange={(e) => setBreed(e.target.value)}
@@ -301,10 +301,10 @@ const PetComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">Color:</label>
+                <label className="form-label">Cor:</label>
                 <input
                   type="text"
-                  placeholder="color"
+                  placeholder="cor"
                   name="color"
                   value={color}
                   onChange={(e) => setColor(e.target.value)}
@@ -316,7 +316,7 @@ const PetComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">Height:</label>
+                <label className="form-label">Altura:</label>
                 <input
                   type="number"
                   min="0"
@@ -333,7 +333,7 @@ const PetComponent = () => {
                 )}
               </div>
               <div className="form-group mb-2">
-                <label className="form-label">Weight:</label>
+                <label className="form-label">Peso:</label>
                 <input
                   type="number"
                   min="0"
@@ -351,7 +351,7 @@ const PetComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">Gender:</label>
+                <label className="form-label">Gênero:</label>
                 <select
                   name="gender"
                   value={gender}
@@ -360,9 +360,9 @@ const PetComponent = () => {
                     errors.gender ? "is-invalid" : ""
                   }`}
                 >
-                  <option value="">Select gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
+                  <option value="">Selecione o Gênero</option>
+                  <option value="Macho">Macho</option>
+                  <option value="Femea">Fêmea</option>
                 </select>
                 {errors.gender && (
                   <div className="invalid-feedback">{errors.gender}</div>
@@ -370,7 +370,7 @@ const PetComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">Birthdate:</label>
+                <label className="form-label">Data de Nascimento:</label>
                 <input
                   type="date"
                   name="birthDate"
@@ -386,7 +386,7 @@ const PetComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">Father:</label>
+                <label className="form-label">Pai:</label>
                 <input
                   type="text"
                   placeholder="father"
@@ -403,7 +403,7 @@ const PetComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">Mother:</label>
+                <label className="form-label">Mãe:</label>
                 <input
                   type="text"
                   placeholder="mother"
@@ -420,9 +420,9 @@ const PetComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">Observations:</label>
+                <label className="form-label">Observações:</label>
                 <textarea
-                  placeholder="observations"
+                  placeholder="observações"
                   name="observations"
                   rows="5"
                   value={observations}
@@ -437,7 +437,7 @@ const PetComponent = () => {
               </div>
 
               <button className="btn btn-success" onClick={saveOrUpdatePet}>
-                Save
+                Salvar
               </button>
             </form>
           </div>

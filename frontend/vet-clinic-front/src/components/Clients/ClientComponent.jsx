@@ -78,28 +78,28 @@ const ClientComponent = () => {
     if (name.trim()) {
       errorsCopy.name = "";
     } else {
-      errorsCopy.name = "Name is required";
+      errorsCopy.name = "Nome é obrigatório";
       valid = false;
     }
 
     if (email.trim()) {
       errorsCopy.email = "";
     } else {
-      errorsCopy.email = "Email is required";
+      errorsCopy.email = "E-mail é obrigatório";
       valid = false;
     }
 
     if (cellPhone.trim()) {
       errorsCopy.cellPhone = "";
     } else {
-      errorsCopy.cellPhone = "cellPhone is required";
+      errorsCopy.cellPhone = "Telefone é obrigatório";
       valid = false;
     }
 
     if (address.trim()) {
       errorsCopy.address = "";
     } else {
-      errorsCopy.address = "Address is required";
+      errorsCopy.address = "Endereço é obrigatório";
       valid = false;
     }
 
@@ -119,9 +119,9 @@ const ClientComponent = () => {
 
   function pageTitle() {
     if (id) {
-      return <h2 className="text-center">Update Client</h2>;
+      return <h2 className="text-center">Atualizar Cliente</h2>;
     } else {
-      return <h2 className="text-center">Add Client</h2>;
+      return <h2 className="text-center">Adicionar Cliente</h2>;
     }
   }
 
@@ -134,7 +134,7 @@ const ClientComponent = () => {
           <div className="card-body">
             <form>
               <div className="form-group mb-2">
-                <label className="form-label">Name:</label>
+                <label className="form-label">Nome:</label>
                 <input
                   type="text"
                   placeholder="name"
@@ -148,7 +148,7 @@ const ClientComponent = () => {
                 )}
               </div>
               <div className="form-group mb-2">
-                <label className="form-label">Email:</label>
+                <label className="form-label">E-mail:</label>
                 <input
                   type="text"
                   placeholder="email"
@@ -163,7 +163,7 @@ const ClientComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">CellPhone:</label>
+                <label className="form-label">Telefone:</label>
                 <input
                   type="email"
                   placeholder="cellPhone"
@@ -180,7 +180,7 @@ const ClientComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">Address:</label>
+                <label className="form-label">Endereço:</label>
                 <input
                   type="text"
                   placeholder="Address"
@@ -198,7 +198,7 @@ const ClientComponent = () => {
 
               <div className="form-group mb-2">
                 {/* States of Brazil */}
-                <label className="form-label">State:</label>
+                <label className="form-label">Estado:</label>
                 <select
                   value={state}
                   onChange={(e) => setState(e.target.value)}
@@ -239,7 +239,7 @@ const ClientComponent = () => {
 
               <button className="btn btn-success" onClick={saveorUpdateClient}>
                 {" "}
-                Save{" "}
+                Salvar{" "}
               </button>
             </form>
           </div>

@@ -89,7 +89,7 @@ const ProcedureComponent = () => {
     if (id) {
       return <h2 className="text-center">Update Procedure</h2>;
     } else {
-      return <h2 className="text-center">Add Procedure</h2>;
+      return <h2 className="text-center">Adicionar Procedimentos</h2>;
     }
   }
 
@@ -102,7 +102,7 @@ const ProcedureComponent = () => {
           <div className="card-body">
             <form>
               <div className="form-group mb-2">
-                <label className="form-label">Name:</label>
+                <label className="form-label">Nome:</label>
                 <input
                   type="text"
                   placeholder="name"
@@ -117,7 +117,7 @@ const ProcedureComponent = () => {
                 )}
               </div>
               <div className="form-group mb-2">
-                <label className="form-label">Price:</label>
+                <label className="form-label">Preço:</label>
                 <input
                   type="number"
                   min="0"
@@ -138,7 +138,7 @@ const ProcedureComponent = () => {
                 onClick={saveOrUpdateProcedure}
               >
                 {" "}
-                Save{" "}
+                Salvar{" "}
               </button>
             </form>
           </div>

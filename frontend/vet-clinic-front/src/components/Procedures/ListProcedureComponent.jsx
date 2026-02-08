@@ -47,17 +47,17 @@ const ListProcedureComponent = () => {
   return (
     <div className="container">
       <br />
-      <h2 className="text-center">List of Procedures</h2>
+      <h2 className="text-center">Lista de Procedimentos</h2>
       <button className="btn btn-success" onClick={addNewProcedure}>
-        Add Procedure
+        Adicionar Procedimentos
       </button>
       <table className="table table-striped">
         <thead>
           <tr>
             <th>Id</th>
-            <th>name</th>
-            <th>price</th>
-            <th>Actions</th>
+            <th>nome</th>
+            <th>preço</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>

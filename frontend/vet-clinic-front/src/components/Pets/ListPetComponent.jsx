@@ -44,18 +44,18 @@ const ListPetComponent = () => {
   return (
     <div className="container">
       <br />
-      <h2 className="text-center">List of Pets</h2>
+      <h2 className="text-center">Lista de Pets</h2>
       <button className="btn btn-success" onClick={addNewPet}>
-        Add Pet
+        Adicionar Pet
       </button>
 
       <table className="table table-striped ">
         <thead>
           <tr>
             <th>id</th>
-            <th>Name</th>
-            <th>Client</th>
-            <th>Actions</th>
+            <th>Nome</th>
+            <th>Cliente</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>

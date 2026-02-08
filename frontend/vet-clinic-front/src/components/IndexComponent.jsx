@@ -4,7 +4,7 @@ const IndexComponent = () => {
   return (
     <>
       <div className="alert alert-warning text-center" role="alert">
-        <h2>Vet Clinic</h2>
+        <h2>Clinica Veterinária</h2>
       </div>
       <div className="container">
         <div className="row">

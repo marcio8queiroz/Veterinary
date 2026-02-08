@@ -74,35 +74,35 @@ const VetComponent = () => {
     if (name.trim()) {
       errorsCopy.name = "";
     } else {
-      errorsCopy.name = "Name is required";
+      errorsCopy.name = "Nome é obrigatório";
       valid = false;
     }
 
     if (email.trim()) {
       errorsCopy.email = "";
     } else {
-      errorsCopy.email = "Email is required";
+      errorsCopy.email = "Email é obrigatório";
       valid = false;
     }
 
     if (cellPhone.trim()) {
       errorsCopy.cellPhone = "";
     } else {
-      errorsCopy.cellPhone = "cellPhone is required";
+      errorsCopy.cellPhone = "celular é obrigatório";
       valid = false;
     }
 
     if (address.trim()) {
       errorsCopy.address = "";
     } else {
-      errorsCopy.address = "Address is required";
+      errorsCopy.address = "Endereço é obrigatório";
       valid = false;
     }
 
     if (state.trim()) {
       errorsCopy.state = "";
     } else {
-      errorsCopy.state = "State is required";
+      errorsCopy.state = "Estado é obrigatório";
       valid = false;
     }
 
@@ -117,7 +117,7 @@ const VetComponent = () => {
     if (id) {
       return <h2 className="text-center">Update Vet</h2>;
     } else {
-      return <h2 className="text-center">Add Vet</h2>;
+      return <h2 className="text-center">Adicionar Veterinário</h2>;
     }
   }
 
@@ -130,7 +130,7 @@ const VetComponent = () => {
           <div className="card-body">
             <form>
               <div className="form-group mb-2">
-                <label className="form-label">Name:</label>
+                <label className="form-label">Nome:</label>
                 <input
                   type="text"
                   placeholder="name"
@@ -159,7 +159,7 @@ const VetComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">CellPhone:</label>
+                <label className="form-label">Celular:</label>
                 <input
                   type="email"
                   placeholder="cellPhone"
@@ -176,7 +176,7 @@ const VetComponent = () => {
               </div>
 
               <div className="form-group mb-2">
-                <label className="form-label">Address:</label>
+                <label className="form-label">Endereço:</label>
                 <input
                   type="text"
                   placeholder="Address"
@@ -194,7 +194,7 @@ const VetComponent = () => {
 
               <div className="form-group mb-2">
                 {/* States of Brazil */}
-                <label className="form-label">State:</label>
+                <label className="form-label">Estado:</label>
                 <select
                   value={state}
                   onChange={(e) => setState(e.target.value)}

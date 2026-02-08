@@ -22,17 +22,17 @@ const ClientsReport = () => {
   return (
     <div className="container">
       <br />
-      <h2 className="text-center"> List of Clients</h2>
+      <h2 className="text-center"> Lista de Clientes</h2>
       <br />
       <table className="table ">
         <thead>
           <tr>
             <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>CellPhone</th>
-            <th>Address</th>
-            <th>State</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th>Endereço</th>
+            <th>Estado</th>
           </tr>
         </thead>
         <tbody>

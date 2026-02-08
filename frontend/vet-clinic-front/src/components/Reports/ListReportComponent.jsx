@@ -19,7 +19,7 @@ const ListReportComponent = () => {
 
   return (
     <div className="container">
-      <h4 className="text-primary">Select a Report:</h4>
+      <h4 className="text-primary">Selecione um Relatório:</h4>
 
       <div>
         <label>
@@ -29,7 +29,7 @@ const ListReportComponent = () => {
             value="/reports/clientsreport"
             onChange={handleRadioChange}
           />
-          Clients
+          Clientes
         </label>
 
         <br />
@@ -52,7 +52,7 @@ const ListReportComponent = () => {
             value="/reports/vetsreport"
             onChange={handleRadioChange}
           />
-          Vets
+          Veterinários
         </label>
         <br />
 
@@ -63,7 +63,7 @@ const ListReportComponent = () => {
             value="/reports/proceduresreport"
             onChange={handleRadioChange}
           />
-          Procedures
+          Procedimentos
         </label>
         <br />
 
@@ -74,7 +74,7 @@ const ListReportComponent = () => {
             value="/reports/consultationsreport"
             onChange={handleRadioChange}
           />
-          Consultations
+          Consulta
         </label>
       </div>
 

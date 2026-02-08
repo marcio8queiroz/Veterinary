@@ -7,7 +7,7 @@ const HeaderComponent = () => {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
-              Vet Clinic
+              Clinica Veterinária
             </a>
             <button
               className="navbar-toggler"
@@ -28,7 +28,7 @@ const HeaderComponent = () => {
                     aria-current="page"
                     href="/clients"
                   >
-                    Clients
+                    Clientes
                   </a>
                 </li>
                 <li className="nav-item">
@@ -38,22 +38,22 @@ const HeaderComponent = () => {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/vets">
-                    Vets
+                    Veterinários
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/procedures">
-                    Procedures
+                    Procedimentos
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/consultations">
-                    Consultations
+                    Consultas
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/reports">
-                    Reports
+                    Relatórios
                   </a>
                 </li>
               </ul>

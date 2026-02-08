@@ -49,29 +49,29 @@ const ListConsultationComponent = () => {
   return (
     <div className="container">
       <br />
-      <h2 className="text-center">List of Consultations</h2>
+      <h2 className="text-center">Lista de Consultas</h2>
       <button className="btn btn-success" onClick={addNewConsultation}>
-        Add Consultations
+        Adicionar Consultas
       </button>
       <table className="table table-striped">
         <thead>
           <tr>
-            <th style={{ width: "100px" }}>Id</th>
-            <th>Date</th>
-            <th>Value</th>
+            {/* <th style={{ width: "100px" }}>Id</th> */}
+            <th>Data</th>
+            <th>Valor</th>
 
             <th>Pet</th>
 
-            <th>Procedures</th>
-            <th>actions</th>
+            <th>Procedimentos</th>
+            <th>ações</th>
           </tr>
         </thead>
         <tbody>
           {consultations.map((consultation) => (
             <tr key={consultation._id}>
-              <td>{consultation._id}</td>
-              {/* <td>{formatDate(consultation.theDate)}</td> */}
-              <td>{consultation.theDate}</td>
+              {/* <td>{consultation._id}</td> */}
+              {<td>{formatDate(consultation.theDate)}</td> }
+              {/* <td>{consultation.theDate}</td> */}
               <td>{consultation.totalCost}</td>
 
               <td>{consultation.pet.name}</td>

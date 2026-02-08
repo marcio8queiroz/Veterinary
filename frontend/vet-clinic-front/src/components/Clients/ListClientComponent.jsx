@@ -44,21 +44,21 @@ const ListClientComponent = () => {
   return (
     <div className="container">
       <br />
-      <h2 className="text-center"> List of Clients</h2>
+      <h2 className="text-center"> Lista de Clientes</h2>
       <button className="btn btn-success" onClick={addNewClient}>
-        Add Client
+        Adicionar Clientes
       </button>
 
       <table className="table table-striped">
         <thead>
           <tr>
             <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>CellPhone</th>
-            <th>Address</th>
-            <th>State</th>
-            <th>Actions</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Celular</th>
+            <th>Endereço</th>
+            <th>Estado</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -75,14 +75,14 @@ const ListClientComponent = () => {
                   onClick={() => updateClient(client._id)}
                   className="btn btn-info"
                 >
-                  Update
+                  Atualizar
                 </button>
                 <button
                   onClick={() => removeClient(client._id)}
                   className="btn btn-danger"
                   style={{ marginLeft: "10px" }}
                 >
-                  Delete
+                  Deletar
                 </button>
               </td>
             </tr>

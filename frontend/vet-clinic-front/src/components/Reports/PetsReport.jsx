@@ -22,18 +22,18 @@ const PetsReport = () => {
   return (
     <div className="container">
       <br />
-      <h2 className="text-center">List of Pets</h2>
+      <h2 className="text-center">Lista de Pets</h2>
 
       <table className="table  ">
         <thead>
           <tr>
             <th>id</th>
-            <th>Name</th>
-            <th>Client</th>
-            <th>specie</th>
-            <th>breed</th>
-            <th>color</th>
-            <th>gender</th>
+            <th>Nome</th>
+            <th>Cliente</th>
+            <th>Espécie</th>
+            <th>Raça</th>
+            <th>Cor</th>
+            <th>Gênero</th>
           </tr>
         </thead>
         <tbody>

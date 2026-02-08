@@ -152,13 +152,13 @@ const ConsultationComponent = () => {
       <br />
       <div className="row">
         <div className="card col-md-10 offset-md-1">
-          <h2 className="text-center">Add Consultation</h2>
+          <h2 className="text-center">Adicionar Consultas</h2>
           <div className="card-body">
             <form>
               <div className="row">
                 <div className="col-md-6">
                   <div className="form-group mb-2">
-                    <label className="form-label">Date:</label>
+                    <label className="form-label">Data:</label>
                     <input
                       type="date"
                       name="theDate"
@@ -174,7 +174,7 @@ const ConsultationComponent = () => {
                   </div>
 
                   <div className="form-group mb-2">
-                    <label className="form-label">Select Vet:</label>
+                    <label className="form-label">Selecione o Veterinário:</label>
                     <select
                       className={`form-control ${
                         errors.vet ? "is-invalid" : ""
@@ -195,7 +195,7 @@ const ConsultationComponent = () => {
                   </div>
 
                   <div className="form-group mb-2">
-                    <label className="form-label">Select Pet:</label>
+                    <label className="form-label">Selecione o Pet:</label>
                     <select
                       className={`form-control ${
                         errors.pet ? "is-invalid" : ""
@@ -219,7 +219,7 @@ const ConsultationComponent = () => {
 
                 <div className="col-md-6">
                   <div className="form-group mb-2">
-                    <label className="form-label ">Select Procedure:</label>
+                    <label className="form-label ">Selecione o Procedimento:</label>
                     <select
                       className={`form-control ${
                         errors.procedures ? "is-invalid" : ""
@@ -247,7 +247,7 @@ const ConsultationComponent = () => {
                       className="btn btn-primary"
                       onClick={addProcedure}
                     >
-                      Add Procedure
+                      Adicione o Procedimento
                     </button>
                   </div>
 

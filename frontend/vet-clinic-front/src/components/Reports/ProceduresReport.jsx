@@ -22,14 +22,14 @@ const ProceduresReport = () => {
   return (
     <div className="container">
       <br />
-      <h2 className="text-center">List of Procedures</h2>
+      <h2 className="text-center">Lista de Procedimentos</h2>
 
       <table className="table">
         <thead>
           <tr>
             <th style={{ width: "250px" }}>Id</th>
-            <th>name</th>
-            <th>price</th>
+            <th>Nome</th>
+            <th>Preço</th>
           </tr>
         </thead>
         <tbody>
