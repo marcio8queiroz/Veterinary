@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 async function main() {
-  await mongoose.connect("mongodb://localhost:27017/vet-clinic-github-MERN");
+  await mongoose.connect("mongodb://localhost:27017/clinica-veterinaria");
   console.log("Mongoose Conected");
 }
 

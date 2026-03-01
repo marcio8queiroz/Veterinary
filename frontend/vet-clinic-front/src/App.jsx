@@ -1,7 +1,10 @@
+import React from "react";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+
+// Imports de Componentes
 import ClientComponent from "./components/Clients/ClientComponent";
 import ListClientComponent from "./components/Clients/ListClientComponent";
 import HeaderComponent from "./components/HeaderComponent";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IndexComponent from "./components/IndexComponent";
 import ListPetComponent from "./components/Pets/ListPetComponent";
 import PetComponent from "./components/Pets/PetComponent";
@@ -18,83 +21,69 @@ import PetsReport from "./components/Reports/PetsReport";
 import ProceduresReport from "./components/Reports/ProceduresReport";
 import ConsultationsReport from "./components/Reports/ConsultationsReport";
 
-function App() {
+// Import do novo componente de Login
+import LoginComponent from "./components/Login/LoginComponent";
+
+/**
+ * Componente de Layout que inclui o Header.
+ * O componente <Outlet /> indica onde as rotas filhas serão renderizadas.
+ */
+const MainLayout = () => {
   return (
     <>
-      <BrowserRouter>
-        <HeaderComponent />
-        <Routes>
-          {/*http://localhost:5173 */}
-          <Route path="/" element={<IndexComponent />}></Route>
-          {/*http://localhost:5173/clients */}
-          <Route path="/clients" element={<ListClientComponent />}></Route>
-          {/* http://localhost:5173/add-client */}
-          <Route path="/add-client" element={<ClientComponent />}></Route>
-          {/* //localhost:5173/edit-client/1 */}
-          <Route path="/edit-client/:id" element={<ClientComponent />}></Route>
-          {/*http://localhost:5173/pets */}
-          <Route path="/pets" element={<ListPetComponent />}></Route>
-          {/* http://localhost:5173/add-pet */}
-          <Route path="/add-pet" element={<PetComponent />}></Route>
-          {/* //localhost:5173/edit-pet/1 */}
-          <Route path="/edit-pet/:id" element={<PetComponent />}></Route>
-          {/*http://localhost:5173/vets */}
-          <Route path="/vets" element={<ListVetComponent />}></Route>
-          {/* http://localhost:5173/add-vet */}
-          <Route path="/add-vet" element={<VetComponent />}></Route>
-          {/* //localhost:5173/edit-vet/1 */}
-          <Route path="/edit-vet/:id" element={<VetComponent />}></Route>
-          {/*http://localhost:5173/procedures */}
-          <Route
-            path="/procedures"
-            element={<ListProcedureComponent />}
-          ></Route>
-          {/* http://localhost:5173/add-procedure */}
-          <Route path="/add-procedure" element={<ProcedureComponent />}></Route>
-          {/* //localhost:5173/edit-procedure/1 */}
-          <Route
-            path="/edit-procedure/:id"
-            element={<ProcedureComponent />}
-          ></Route>
-          {/*http://localhost:5173/consultations */}
-          <Route
-            path="/consultations"
-            element={<ListConsultationComponent />}
-          ></Route>
-          {/* http://localhost:5173/add-consultation */}
-          <Route
-            path="/add-consultation"
-            element={<ConsultationComponent />}
-          ></Route>
-          {/*http://localhost:5173/reports */}
-          <Route path="/reports" element={<ListReportComponent />}></Route>
-
-          {/*http://localhost:5173/reports/clientsreport */}
-          <Route
-            path="/reports/clientsreport"
-            element={<ClientsReport />}
-          ></Route>
-
-          {/*http://localhost:5173/reports/vetsreport */}
-          <Route path="/reports/vetsreport" element={<VetsReport />}></Route>
-
-          {/*http://localhost:5173/reports/petsreport */}
-          <Route path="/reports/petsreport" element={<PetsReport />}></Route>
-
-          {/*http://localhost:5173/reports/proceduresreport */}
-          <Route
-            path="/reports/proceduresreport"
-            element={<ProceduresReport />}
-          ></Route>
-
-          {/*http://localhost:5173/reports/consultationsreport */}
-          <Route
-            path="/reports/consultationsreport"
-            element={<ConsultationsReport />}
-          ></Route>
-        </Routes>
-      </BrowserRouter>
+      <HeaderComponent />
+      <main>
+        <Outlet />
+      </main>
     </>
+  );
+};
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Rota de Login - Independente (Sem Header) */}
+        <Route path="/" element={<LoginComponent />} />
+
+        {/* Grupo de Rotas que UTILIZAM o Header */}
+        <Route element={<MainLayout />}>
+          <Route path="/dashboard" element={<IndexComponent />} />
+          
+          {/* Clientes */}
+          <Route path="/clients" element={<ListClientComponent />} />
+          <Route path="/add-client" element={<ClientComponent />} />
+          <Route path="/edit-client/:id" element={<ClientComponent />} />
+          
+          {/* Pets */}
+          <Route path="/pets" element={<ListPetComponent />} />
+          <Route path="/add-pet" element={<PetComponent />} />
+          <Route path="/edit-pet/:id" element={<PetComponent />} />
+          
+          {/* Veterinários */}
+          <Route path="/vets" element={<ListVetComponent />} />
+          <Route path="/add-vet" element={<VetComponent />} />
+          <Route path="/edit-vet/:id" element={<VetComponent />} />
+          
+          {/* Procedimentos */}
+          <Route path="/procedures" element={<ListProcedureComponent />} />
+          <Route path="/add-procedure" element={<ProcedureComponent />} />
+          <Route path="/edit-procedure/:id" element={<ProcedureComponent />} />
+          
+          {/* Consultas */}
+          <Route path="/consultations" element={<ListConsultationComponent />} />
+          <Route path="/add-consultation" element={<ConsultationComponent />} />
+          
+          {/* Relatórios */}
+          <Route path="/reports" element={<ListReportComponent />} />
+          <Route path="/reports/clientsreport" element={<ClientsReport />} />
+          <Route path="/reports/vetsreport" element={<VetsReport />} />
+          <Route path="/reports/petsreport" element={<PetsReport />} />
+          <Route path="/reports/proceduresreport" element={<ProceduresReport />} />
+          <Route path="/reports/consultationsreport" element={<ConsultationsReport />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

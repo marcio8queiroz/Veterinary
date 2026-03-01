@@ -1,12 +1,22 @@
 import React from "react";
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const HeaderComponent = () => {
+const navigate = useNavigate();
+
+  const handleLogout = () => {
+        // 1. Limpar dados de sessão (ex: localStorage.removeItem('token'))
+        // 2. Redirecionar para a tela de login
+        console.log("Usuário deslogado");
+        navigate('/');
+    };
+
   return (
     <div>
       <header>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <a className="navbar-brand" href="/">
+            <a className="navbar-brand" href="/dashboard">
               Clinica Veterinária
             </a>
             <button
@@ -57,6 +67,16 @@ const HeaderComponent = () => {
                   </a>
                 </li>
               </ul>
+
+              <div className="d-flex ms-auto align-items-center">
+                <span className="text-ligth me-3 small">Olá, Veterinário!</span>
+                <button
+                className="btn btn-outline-danger btn-sm"
+                onClick={handleLogout}
+                >
+                  Sair
+                </button>
+              </div>
             </div>
           </div>
         </nav>
