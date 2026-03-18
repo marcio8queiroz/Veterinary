@@ -5,9 +5,8 @@ const HeaderComponent = () => {
 const navigate = useNavigate();
 
   const handleLogout = () => {
-        // 1. Limpar dados de sessão (ex: localStorage.removeItem('token'))
-        // 2. Redirecionar para a tela de login
-        console.log("Usuário deslogado");
+        localStorage.removeItem('token'); //remove o crachá de acesso do usuário
+        // console.log("Usuário deslogado");
         navigate('/');
     };
 

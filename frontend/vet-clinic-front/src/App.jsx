@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import ProtectedRoute from "../../../backend/routes/ProtectedRoute";
 
 // Imports de Componentes
 import ClientComponent from "./components/Clients/ClientComponent";
@@ -47,40 +48,42 @@ function App() {
         <Route path="/" element={<LoginComponent />} />
 
         {/* Grupo de Rotas que UTILIZAM o Header */}
-        <Route element={<MainLayout />}>
-          <Route path="/dashboard" element={<IndexComponent />} />
-          
-          {/* Clientes */}
-          <Route path="/clients" element={<ListClientComponent />} />
-          <Route path="/add-client" element={<ClientComponent />} />
-          <Route path="/edit-client/:id" element={<ClientComponent />} />
-          
-          {/* Pets */}
-          <Route path="/pets" element={<ListPetComponent />} />
-          <Route path="/add-pet" element={<PetComponent />} />
-          <Route path="/edit-pet/:id" element={<PetComponent />} />
-          
-          {/* Veterinários */}
-          <Route path="/vets" element={<ListVetComponent />} />
-          <Route path="/add-vet" element={<VetComponent />} />
-          <Route path="/edit-vet/:id" element={<VetComponent />} />
-          
-          {/* Procedimentos */}
-          <Route path="/procedures" element={<ListProcedureComponent />} />
-          <Route path="/add-procedure" element={<ProcedureComponent />} />
-          <Route path="/edit-procedure/:id" element={<ProcedureComponent />} />
-          
-          {/* Consultas */}
-          <Route path="/consultations" element={<ListConsultationComponent />} />
-          <Route path="/add-consultation" element={<ConsultationComponent />} />
-          
-          {/* Relatórios */}
-          <Route path="/reports" element={<ListReportComponent />} />
-          <Route path="/reports/clientsreport" element={<ClientsReport />} />
-          <Route path="/reports/vetsreport" element={<VetsReport />} />
-          <Route path="/reports/petsreport" element={<PetsReport />} />
-          <Route path="/reports/proceduresreport" element={<ProceduresReport />} />
-          <Route path="/reports/consultationsreport" element={<ConsultationsReport />} />
+        <Route element={<ProtectedRoute />}>
+          <Route element={<MainLayout />}>
+            <Route path="/dashboard" element={<IndexComponent />} />
+
+            {/* Clientes */}
+            <Route path="/clients" element={<ListClientComponent />} />
+            <Route path="/add-client" element={<ClientComponent />} />
+            <Route path="/edit-client/:id" element={<ClientComponent />} />
+
+            {/* Pets */}
+            <Route path="/pets" element={<ListPetComponent />} />
+            <Route path="/add-pet" element={<PetComponent />} />
+            <Route path="/edit-pet/:id" element={<PetComponent />} />
+
+            {/* Veterinários */}
+            <Route path="/vets" element={<ListVetComponent />} />
+            <Route path="/add-vet" element={<VetComponent />} />
+            <Route path="/edit-vet/:id" element={<VetComponent />} />
+
+            {/* Procedimentos */}
+            <Route path="/procedures" element={<ListProcedureComponent />} />
+            <Route path="/add-procedure" element={<ProcedureComponent />} />
+            <Route path="/edit-procedure/:id" element={<ProcedureComponent />} />
+
+            {/* Consultas */}
+            <Route path="/consultations" element={<ListConsultationComponent />} />
+            <Route path="/add-consultation" element={<ConsultationComponent />} />
+
+            {/* Relatórios */}
+            <Route path="/reports" element={<ListReportComponent />} />
+            <Route path="/reports/clientsreport" element={<ClientsReport />} />
+            <Route path="/reports/vetsreport" element={<VetsReport />} />
+            <Route path="/reports/petsreport" element={<PetsReport />} />
+            <Route path="/reports/proceduresreport" element={<ProceduresReport />} />
+            <Route path="/reports/consultationsreport" element={<ConsultationsReport />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

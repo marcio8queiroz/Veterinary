@@ -1,34 +1,31 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const LoginComponent = () => {
     const [email, setEmail] = useState('vet@admin.com');
     const [password, setPassword] = useState('123456');
     const navigate = useNavigate();
+    const [error, setError] = useState(''); // Verifique se isso está no topo do componente
 
-
-    const handleLogin = async (e) => {
+   const handleLogin = async (e) => {
         e.preventDefault();
-        console.log("Tentativa de login com:", email, password);
-        // Aqui você adicionará a lógica de integração com seu backend Node.js
-        navigate('/dashboard');
-        setError('');
+        setError(''); // Limpa erros anteriores
+        console.log("Iniciando requisição para o backend...");
 
         try {
-            // Ajuste a URL para a rota do seu backend Node.js
-            const response = await axios.post('http://localhost:5000/api/login', {
+            const response = await axios.post('http://localhost:5000/api/v1/auth/login', {
                 email: email,
                 password: password
             });
 
-            // Se o login for bem sucedido, o backend deve retornar o token
+            // Se o login for bem sucedido
             const { token } = response.data;
-
-            // Salva o token no navegador
             localStorage.setItem('token', token);
+            console.log("Token salvo! Redirecionando...");
 
-            // Redireciona para a página inicial
-            navigate('/');
+            // AGORA SIM você navega
+            navigate('/dashboard'); 
             
         } catch (err) {
             setError('Usuário ou senha inválidos');
